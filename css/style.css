@@ -382,6 +382,21 @@ ul {
 }
 
 
+/* jozaa add these */
+.rtl {
+    direction: rtl; 
+    text-align: right;
+    /* didnt know this for what but it is work without */
+    /* unicode-bidi: bidi-override; */
+}
+
+.ltr {
+    direction: ltr; 
+    text-align: left;
+    /* didnt know this for what but it is work without */
+    /* unicode-bidi: bidi-override; */
+}
+
 /* =========================================
                 About 02
 ============================================ */
