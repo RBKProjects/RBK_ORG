@@ -419,6 +419,9 @@
                             <div class="overlay">
                                 <a class="info" href="https://sustainabledevelopment.un.org/sdg1" target="_blank">As a livelihoods program, RBK is rapidly vulnerable populations from poverty to prosperity.</a>
                             </div>
+                            <div class="hover-overlay">
+                                <span class="hand-info"><i class="fa fa-hand-paper-o wow fadeInRight infinite"></i></span>
+                            </div>
                         </div>
                         <div id="img-2" class="swiper-slide">
                             <div class="overlay">
@@ -1340,34 +1343,30 @@
 
                                     <div class="col-md-6 col-sm-6">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" id="name" placeholder="Your Name" name="entry.588714008">
+                                            <input type="text" class="form-control" id="name" placeholder="Your Name" name="entry.588714008" required>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-sm-6">
                                         <div class="form-group">
-                                            <input type="email" class="form-control" id="email" placeholder="Email Address" name="entry.1651348247">
+                                            <input type="email" class="form-control" id="email" placeholder="Email Address" name="entry.1651348247" required>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-sm-6">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" id="phone" placeholder="Phone No." name="entry.937799318">
+                                            <input type="text" class="form-control" id="phone" placeholder="Phone No." name="entry.937799318" required>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-sm-6">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" id="subject" placeholder="Subject" name="entry.1773325566">
+                                            <input type="text" class="form-control" id="subject" placeholder="Subject" name="entry.1773325566" required>
                                         </div>
                                     </div>
 
                                 </div>
                                 <div class="form-group">
-                                    <textarea class="form-control" id="message" placeholder="Message" name="entry.1800217154"></textarea>
+                                    <textarea class="form-control" id="message" placeholder="Message" name="entry.1800217154" required></textarea>
                                 </div>
-                                <input type="submit" value="Submit" onclick="test()" class="btn-submit">
-
-                                <!-- <div id="submit-btn">
-                                    <a id="msg-btn" class="btn btn-general btn-pink" href="#" title="Submit" role="button">Submit</a>
-                                </div> -->
+                                <input type="submit" value="Submit" onclick="submit()" class="btn-submit btn-general">
 
                             </form>
 
