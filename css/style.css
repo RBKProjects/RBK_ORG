@@ -277,6 +277,20 @@ ul {
     display: none;
 }
 
+.btn-submit {
+    color: #fff;
+    border: 1px solid #b40381;
+    background-color: #b40381;
+}
+
+.btn-submit:hover,
+.btn-submit:focus {
+    color: black;
+    background-color: #fff;
+    border: 1px solid #b40381;
+}
+
+
 /* Apply Button */
 
 .btn--primary {
@@ -2186,12 +2200,13 @@ ul.social-list li:nth-child(3) a:hover {
 }
 
 #clients-list {
-    /* padding: 0px 0 0 0; */
+     padding: 0; 
 }
 
 .client {
     padding: 0 10px;
-    max-width: 150px;
+    max-width: 175px;
+    height: 100%;
     margin: 0 auto;
     line-height: 50px;
 }
@@ -3108,6 +3123,17 @@ ul#navbar-nav > li > a:focus {
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
 }
+#img-1 .hover-overlay {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
 
 .swiper-slide:hover .overlay {
     background-color: rgba(170, 170, 170, 0.4);
@@ -3167,3 +3193,30 @@ ul#navbar-nav > li > a:focus {
     transform: scale(1);
     background-color: rgba(0, 0, 0, 0.8);
 }
+
+#img-1 span.hand-info {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    color: black;
+    border-radius: 5px;
+    margin: 50px 0 0 0;
+    filter: alpha(opacity=0);
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transform: scale(1.5);
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    font-weight: normal;
+    height: 85%;
+    width: 85%;
+    position: absolute;
+    font-family: "Exo 2", "Raleway";
+    top: -10.5%;
+    left: 8%;
+    padding-top: 55px;
+    font-size: 75px;
+    text-align: center;
+    letter-spacing: normal;
+}
+

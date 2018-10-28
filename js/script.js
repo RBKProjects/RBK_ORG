@@ -1,15 +1,21 @@
 /* =========================================
                 Preloader
 ============================================ */
+var loc = window.location.href.split("/")
+if(loc[loc.length - 1] === "index.html"){
+
 $(window).on('load', function () { // makes sure that whole site is loaded
+    localStorage.removeItem('senderName')
     $('#status').fadeOut();
     $('#preloader').delay(350).fadeOut('slow');
 });
 
-
+    
 /* =========================================
                 Team
 ============================================ */
+
+
 $(function () {
 
     // $.getJSON("./info/teamMembers.json", function (data) {  
@@ -695,7 +701,7 @@ $(function () {
 
     }
     $("#clients-list").owlCarousel({
-        items: 6,
+        items: 5,
         autoplay: false,
         smartSpeed: 700,
         loop: true,
@@ -714,7 +720,7 @@ $(function () {
             },
             // breakpoint from 768 up
             768: {
-                items: 6
+                items: 5
             }
         }
     });
@@ -919,16 +925,16 @@ $(function () {
     });
 });
 
-
-function test() {
-
+function submit() {
+    
     $('.submit').click(function () {
+        localStorage.setItem("senderName" , $("#name").val())
         $.ajax({
             type: 'POST',
             url: "https://docs.google.com/forms/d/e/1FAIpQLScHAIv8OFLYtPhGqZK-JmyyjEghSaWAtO9M5AVh0Kx5OOqn8w/formResponse",
             data: $(this).serialize(),
             error: function () {
-                window.location.reload()
+                window.location.href = "thankYou.html"
             },
             success: function (response) {
                 window.location.reload()
@@ -955,3 +961,19 @@ var swiper = new Swiper('.swiper-container', {
         el: '.swiper-pagination',
     }
 });
+
+$(".hover-overlay").mouseover(function(){
+    $(".hover-overlay").hide();
+});
+
+} else {
+    $(window).on('load', function () {
+        var senderName = localStorage.getItem("senderName")
+        $("#sender").text(senderName);
+        localStorage.removeItem('senderName')
+    });
+    
+    $("#back-home").on("click", function(){
+        window.location.href = "index.html"
+    })
+}
